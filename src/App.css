@@ -11,7 +11,7 @@ body {
 }
 .repos {
   /* margin-top: 5rem; */
-  background-color: rgb(246, 248, 250);
+  background-color: rgb(26, 30, 34);
 }
 .repo-container {
   display: grid;
@@ -25,7 +25,7 @@ body {
   box-shadow: 7px 17px 20px -19px rgba(0, 0, 0, 0.37);
   margin-left: 1rem;
   margin-right: 1rem;
-  width: 350px;
+  width: 100%;
   padding-left: 20px;
   padding-right: 20px;
   background-color: rgb(255, 255, 255);
@@ -132,54 +132,7 @@ body {
   font-weight: 600;
   color: rgb(200, 225, 255);
 }
-.details-overall-con {
-  height: 95vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  overflow-y: hidden;
-  text-align: center;
-  background-color: #f8f9fa;
-}
-.details-container {
-  padding: 3rem;
-  border-radius: 5px;
-  box-shadow: 7px 17px 20px -19px rgba(0, 0, 0, 0.37);
-  background-color: rgb(255, 255, 255);
-  width: 600px;
-}
 
-.details-header {
-  font-size: 28px;
-  font-weight: 600;
-  margin: 20px 0;
-  color: rgb(0, 112, 243);
-}
-.details-name {
-  font-size: 22px;
-  font-weight: 500;
-  margin: 20px 0;
-  color: rgb(0, 112, 243);
-  text-transform: capitalize;
-}
-.details-description {
-  font-size: 16px;
-  font-weight: 400;
-  margin: 20px 0;
-  color: rgb(26, 30, 34);
-  text-transform: capitalize;
-}
-.details-language,
-.details-size,
-.details-visibility,
-.details-date {
-  font-size: 15px;
-  font-weight: 400;
-  margin: 20px 0;
-  color: rgb(26, 30, 34);
-  text-transform: capitalize;
-}
 .buttons {
   display: flex;
   gap: 3rem;

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../App.css";
 import { Helmet } from "react-helmet-async";
 
-function Profile() {
+function Profile(props) {
   const [profile, setProfile] = useState([]);
   // Fetching Profile Data
   useEffect(() => {
@@ -18,7 +18,7 @@ function Profile() {
   };
   console.log(profile);
   return (
-    <div className="profile-container">
+    <div className={props.dynamicClassName}>
       <Helmet>
         <title>Github Portofolio</title>
         <meta

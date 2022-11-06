@@ -7,7 +7,7 @@ function Home() {
   return (
     <>
       <ErrorBoundary>
-        <Profile />
+        <Profile dynamicClassName="profile-container" />
         <Repo />
       </ErrorBoundary>
     </>
