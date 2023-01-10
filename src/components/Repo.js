@@ -1,21 +1,36 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "../App.css";
 import { Helmet } from "react-helmet-async";
+let count = 1;
 
 function Repo() {
   const [Repos, setRepos] = useState([]);
+
+  const pageNum = 1;
 
   const getRepos = async (val) => {
     const reps = await fetch(
       `https://api.github.com/users/Nunucodes/repos?per_page=8&page=${val}`
     );
+    console.log("i am", val);
+
     const data = await reps.json();
     setRepos(data);
   };
+  const nextButton = () => {
+    count > 2 || count++;
+    console.log(count);
+    getRepos(count);
+  };
+  const previousButton = () => {
+    count < 2 || count--;
+    console.log(count);
+    getRepos(count);
+  };
 
   useEffect(() => {
-    getRepos(1);
+    getRepos(pageNum);
   }, []);
   return (
     <div className="repos">
@@ -42,6 +57,7 @@ function Repo() {
               <li className="repo-card">
                 <h4 className="repo-name">{repo.name}</h4>
                 <p className="repo-description">{repo.description}</p>
+
                 <div className="language">
                   <p className="repo-lang">{repo.language}</p>
                 </div>
@@ -54,10 +70,11 @@ function Repo() {
           ))}
       </ul>
       <div className="buttons">
-        <button onClick={() => getRepos(1)} className="previous">
+        <button onClick={previousButton} className="previous">
           Previous
         </button>
-        <button onClick={() => getRepos(2)} className="next">
+
+        <button onClick={nextButton} className="next">
           Next
         </button>
       </div>

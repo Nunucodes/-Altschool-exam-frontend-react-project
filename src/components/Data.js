@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { NavLink } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { DetailsContext } from "./Context";
 import Profile from "./Profile";
@@ -30,6 +31,12 @@ function Data() {
         </div>
       </div>
       <div className="backdrop_filter"></div>
+      <div className="back-to-profile">
+        <NavLink className="back" to="/">
+          {" "}
+          <h2>Back to Home Page</h2>
+        </NavLink>
+      </div>
     </div>
   );
 }

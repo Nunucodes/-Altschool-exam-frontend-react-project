@@ -91,3 +91,31 @@
   color: rgb(26, 30, 34);
   text-transform: capitalize;
 }
+.back-to-profile {
+  position: fixed;
+  z-index: 1000;
+  bottom: 0;
+  /* left: 45%; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  padding: 15px;
+  text-decoration: none;
+  color: blue;
+}
+.back-to-profile h2 {
+  color: rgb(0, 112, 243);
+  /* border: 1px solid white; */
+  padding: 12px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  transition: all 0.3s ease-in;
+}
+.back-to-profile h2:hover {
+  transform: scaleX(1.2);
+  background-color: rgba(255, 255, 255, 0.705);
+}
+.back {
+  text-decoration: none;
+}

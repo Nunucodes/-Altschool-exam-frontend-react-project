@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../App.css";
 import { Helmet } from "react-helmet-async";
+import { NavLink } from "react-router-dom";
 
 function Profile(props) {
   const [profile, setProfile] = useState([]);
